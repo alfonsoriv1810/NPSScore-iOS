@@ -1,6 +1,0 @@
-framework module Pods_NPSScore {
-  umbrella header "Pods-NPSScore-umbrella.h"
-
-  export *
-  module * { export * }
-}
