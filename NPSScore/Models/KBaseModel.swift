@@ -9,5 +9,18 @@
 import UIKit
 
 class KBaseModel: NSObject {
+    var rawValue:AnyObject? = nil
     
+    override init() {
+        super.init()
+    }
+    
+    required init(objectToParse:AnyObject) {
+        super.init()
+        parseModelWithObject(modelObject: objectToParse)
+    }
+    
+    func parseModelWithObject(modelObject:AnyObject) {
+        self.rawValue = modelObject
+    }
 }

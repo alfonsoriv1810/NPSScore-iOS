@@ -9,24 +9,44 @@
 /* Begin PBXBuildFile section */
 		18DBE56772E1434A10C55E4D /* Pods_NPSScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3EB607C7CD2F61AAFA1710 /* Pods_NPSScore.framework */; };
 		27179254220E89DA00C964B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27179253220E89DA00C964B6 /* AppDelegate.swift */; };
-		27179256220E89DA00C964B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27179255220E89DA00C964B6 /* ViewController.swift */; };
 		27179259220E89DA00C964B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27179257220E89DA00C964B6 /* Main.storyboard */; };
 		2717925B220E89DC00C964B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2717925A220E89DC00C964B6 /* Assets.xcassets */; };
 		2717925E220E89DC00C964B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2717925C220E89DC00C964B6 /* LaunchScreen.storyboard */; };
 		27179269220E8ACB00C964B6 /* KBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27179268220E8ACB00C964B6 /* KBaseViewController.swift */; };
 		2717926B220E8AF800C964B6 /* KBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2717926A220E8AF800C964B6 /* KBaseModel.swift */; };
+		272ED15E220F33B1005D0FA9 /* KConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED15D220F33B1005D0FA9 /* KConstants.swift */; };
+		272ED160220FA87D005D0FA9 /* KNpsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED15F220FA87D005D0FA9 /* KNpsModel.swift */; };
+		272ED163220FAD13005D0FA9 /* KRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED162220FAD13005D0FA9 /* KRequestManager.swift */; };
+		272ED165220FB432005D0FA9 /* KParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED164220FB432005D0FA9 /* KParserManager.swift */; };
+		272ED167220FBF5F005D0FA9 /* KSplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED166220FBF5F005D0FA9 /* KSplashScreenViewController.swift */; };
+		272ED1692210958A005D0FA9 /* KBuildModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED1682210958A005D0FA9 /* KBuildModel.swift */; };
+		272ED16B2210A2D2005D0FA9 /* KNpsBuildScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED16A2210A2D2005D0FA9 /* KNpsBuildScoreViewController.swift */; };
+		272ED16D2210A3CF005D0FA9 /* KNPSSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED16C2210A3CF005D0FA9 /* KNPSSingleton.swift */; };
+		272ED16F22110DA0005D0FA9 /* KNpsBuildDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED16E22110DA0005D0FA9 /* KNpsBuildDetailViewController.swift */; };
+		272ED174221122C2005D0FA9 /* KNpsValueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272ED172221122C1005D0FA9 /* KNpsValueCollectionViewCell.swift */; };
+		272ED175221122C2005D0FA9 /* KNpsValueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272ED173221122C1005D0FA9 /* KNpsValueCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27179250220E89DA00C964B6 /* NPSScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NPSScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27179253220E89DA00C964B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27179255220E89DA00C964B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27179258220E89DA00C964B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2717925A220E89DC00C964B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2717925D220E89DC00C964B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2717925F220E89DC00C964B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27179268220E8ACB00C964B6 /* KBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBaseViewController.swift; sourceTree = "<group>"; };
 		2717926A220E8AF800C964B6 /* KBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBaseModel.swift; sourceTree = "<group>"; };
+		272ED15D220F33B1005D0FA9 /* KConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KConstants.swift; sourceTree = "<group>"; };
+		272ED15F220FA87D005D0FA9 /* KNpsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNpsModel.swift; sourceTree = "<group>"; };
+		272ED162220FAD13005D0FA9 /* KRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRequestManager.swift; sourceTree = "<group>"; };
+		272ED164220FB432005D0FA9 /* KParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KParserManager.swift; sourceTree = "<group>"; };
+		272ED166220FBF5F005D0FA9 /* KSplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KSplashScreenViewController.swift; sourceTree = "<group>"; };
+		272ED1682210958A005D0FA9 /* KBuildModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBuildModel.swift; sourceTree = "<group>"; };
+		272ED16A2210A2D2005D0FA9 /* KNpsBuildScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNpsBuildScoreViewController.swift; sourceTree = "<group>"; };
+		272ED16C2210A3CF005D0FA9 /* KNPSSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNPSSingleton.swift; sourceTree = "<group>"; };
+		272ED16E22110DA0005D0FA9 /* KNpsBuildDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNpsBuildDetailViewController.swift; sourceTree = "<group>"; };
+		272ED172221122C1005D0FA9 /* KNpsValueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNpsValueCollectionViewCell.swift; sourceTree = "<group>"; };
+		272ED173221122C1005D0FA9 /* KNpsValueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KNpsValueCollectionViewCell.xib; sourceTree = "<group>"; };
 		2B3EB607C7CD2F61AAFA1710 /* Pods_NPSScore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NPSScore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F08168DB5D45F8ECA4F64331 /* Pods-NPSScore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSScore.debug.xcconfig"; path = "Target Support Files/Pods-NPSScore/Pods-NPSScore.debug.xcconfig"; sourceTree = "<group>"; };
 		F7B0EF1A46AC678941F4ECC4 /* Pods-NPSScore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NPSScore.release.xcconfig"; path = "Target Support Files/Pods-NPSScore/Pods-NPSScore.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,11 +85,12 @@
 		27179252220E89DA00C964B6 /* NPSScore */ = {
 			isa = PBXGroup;
 			children = (
-				27179267220E8A8900C964B6 /* Helpers */,
+				272ED17022112257005D0FA9 /* Cells */,
+				272ED161220FACF0005D0FA9 /* Singletons */,
+				272ED15C220F33B1005D0FA9 /* Helpers */,
 				27179266220E8A7A00C964B6 /* ViewControllers */,
 				27179265220E8A6A00C964B6 /* Models */,
 				27179253220E89DA00C964B6 /* AppDelegate.swift */,
-				27179255220E89DA00C964B6 /* ViewController.swift */,
 				27179257220E89DA00C964B6 /* Main.storyboard */,
 				2717925A220E89DC00C964B6 /* Assets.xcassets */,
 				2717925C220E89DC00C964B6 /* LaunchScreen.storyboard */,
@@ -82,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				2717926A220E8AF800C964B6 /* KBaseModel.swift */,
+				272ED15F220FA87D005D0FA9 /* KNpsModel.swift */,
+				272ED1682210958A005D0FA9 /* KBuildModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -90,15 +113,46 @@
 			isa = PBXGroup;
 			children = (
 				27179268220E8ACB00C964B6 /* KBaseViewController.swift */,
+				272ED166220FBF5F005D0FA9 /* KSplashScreenViewController.swift */,
+				272ED16A2210A2D2005D0FA9 /* KNpsBuildScoreViewController.swift */,
+				272ED16E22110DA0005D0FA9 /* KNpsBuildDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		27179267220E8A8900C964B6 /* Helpers */ = {
+		272ED15C220F33B1005D0FA9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				272ED15D220F33B1005D0FA9 /* KConstants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		272ED161220FACF0005D0FA9 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				272ED162220FAD13005D0FA9 /* KRequestManager.swift */,
+				272ED164220FB432005D0FA9 /* KParserManager.swift */,
+				272ED16C2210A3CF005D0FA9 /* KNPSSingleton.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		272ED17022112257005D0FA9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				272ED17122112262005D0FA9 /* CollectionViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		272ED17122112262005D0FA9 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				272ED172221122C1005D0FA9 /* KNpsValueCollectionViewCell.swift */,
+				272ED173221122C1005D0FA9 /* KNpsValueCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 		AD7B5F4514B46DA85E5B8497 /* Pods */ = {
@@ -107,7 +161,6 @@
 				F08168DB5D45F8ECA4F64331 /* Pods-NPSScore.debug.xcconfig */,
 				F7B0EF1A46AC678941F4ECC4 /* Pods-NPSScore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +183,7 @@
 				2717924C220E89DA00C964B6 /* Sources */,
 				2717924D220E89DA00C964B6 /* Frameworks */,
 				2717924E220E89DA00C964B6 /* Resources */,
+				3E1057699997A1B841604CF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272ED175221122C2005D0FA9 /* KNpsValueCollectionViewCell.xib in Resources */,
 				2717925E220E89DC00C964B6 /* LaunchScreen.storyboard in Resources */,
 				2717925B220E89DC00C964B6 /* Assets.xcassets in Resources */,
 				27179259220E89DA00C964B6 /* Main.storyboard in Resources */,
@@ -187,6 +242,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E1057699997A1B841604CF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NPSScore/Pods-NPSScore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NPSScore/Pods-NPSScore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B53C5DF6E381989348239038 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,8 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272ED16D2210A3CF005D0FA9 /* KNPSSingleton.swift in Sources */,
+				272ED167220FBF5F005D0FA9 /* KSplashScreenViewController.swift in Sources */,
+				272ED174221122C2005D0FA9 /* KNpsValueCollectionViewCell.swift in Sources */,
+				272ED1692210958A005D0FA9 /* KBuildModel.swift in Sources */,
+				272ED163220FAD13005D0FA9 /* KRequestManager.swift in Sources */,
+				272ED16F22110DA0005D0FA9 /* KNpsBuildDetailViewController.swift in Sources */,
+				272ED15E220F33B1005D0FA9 /* KConstants.swift in Sources */,
+				272ED16B2210A2D2005D0FA9 /* KNpsBuildScoreViewController.swift in Sources */,
+				272ED165220FB432005D0FA9 /* KParserManager.swift in Sources */,
+				272ED160220FA87D005D0FA9 /* KNpsModel.swift in Sources */,
 				27179269220E8ACB00C964B6 /* KBaseViewController.swift in Sources */,
-				27179256220E89DA00C964B6 /* ViewController.swift in Sources */,
 				2717926B220E8AF800C964B6 /* KBaseModel.swift in Sources */,
 				27179254220E89DA00C964B6 /* AppDelegate.swift in Sources */,
 			);
