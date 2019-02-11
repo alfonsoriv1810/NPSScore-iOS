@@ -60,5 +60,10 @@ class KNpsBuildDetailViewController: KBaseViewController, UICollectionViewDelega
         self.currentSelectedIndex = indexPath.row
         collectionView.reloadData()
         //TODO:Update nps info data.
+        let npsUsersPredicate = NSPredicate(format: "npsValue == \(indexPath.row)")
+        let myArray:[KNpsModel] = self.buildNpsModel?.allUsers?.filtered(using: npsUsersPredicate) as! [KNpsModel]
+        let activityViews = myArray.map({ $0.activityViews })
+        print(activityViews)
+        //TODO: get mode valie from activityViews array and get the percentage depending on the total users array with the formula.
     }
 }

@@ -12,6 +12,7 @@ class KBuildModel: KBaseModel {
     public var version:String = ""
     public var freemiumUsers:NSArray? = nil
     public var premiumUsers:NSArray? = nil
+    public var allUsers:NSArray? = nil
     public var releaseDate:Date? = nil
     
     override func parseModelWithObject(modelObject: AnyObject) {
@@ -27,13 +28,14 @@ class KBuildModel: KBaseModel {
         }
         
         if (modelObject[KDictionaryDataKeys.npsResult] as? NSArray) != nil {
-            let arrayModel = modelObject[KDictionaryDataKeys.npsResult] as! NSArray
+            self.allUsers = (modelObject[KDictionaryDataKeys.npsResult] as! NSArray)
             let freemiumPredicate = NSPredicate(format: "userPlan = '\(KDictionaryDataKeys.userPlanFreemium)'")
-            self.freemiumUsers = arrayModel.filtered(using: freemiumPredicate) as NSArray
+            self.freemiumUsers = self.allUsers!.filtered(using: freemiumPredicate) as NSArray
             
             let premiumPredicate = NSPredicate(format: "userPlan = '\(KDictionaryDataKeys.userPlanPremium)'")
-            self.premiumUsers = arrayModel.filtered(using: premiumPredicate) as NSArray
+            self.premiumUsers = self.allUsers!.filtered(using: premiumPredicate) as NSArray
         } else {
+            self.allUsers = NSArray.init()
             self.freemiumUsers = NSArray.init()
             self.premiumUsers = NSArray.init()
         }
