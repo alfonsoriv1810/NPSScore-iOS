@@ -24,7 +24,8 @@ class KNpsBuildDetailViewController: KBaseViewController, UICollectionViewDelega
     //MARK:ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNpsDetailUIData()
+        setUpCollectionView()
+        setUpNpsDetailUIData(npsValue: 0)
     }
     
     //MARK:ViewController parent methods
@@ -35,13 +36,38 @@ class KNpsBuildDetailViewController: KBaseViewController, UICollectionViewDelega
     }
     
     //MARK:ViewController UI methods
-    func setUpNpsDetailUIData() {
-        self.freemiumTotalUsersLabel.text = "\(self.buildNpsModel?.freemiumUsers?.count ?? 0)"
-        self.premiumTotalUsersLabel.text = "\(self.buildNpsModel?.premiumUsers?.count ?? 0)"
-        
+    func setUpCollectionView() {
         self.npsValuesCollectionView.delegate = self
         self.npsValuesCollectionView.dataSource = self
         self.npsValuesCollectionView.register(UINib.init(nibName: KCellsIdentifiers.npsValueCell, bundle: nil), forCellWithReuseIdentifier: KCellsIdentifiers.npsValueCell)
+    }
+    
+    func setUpNpsDetailUIData(npsValue:Int) {
+        self.freemiumTotalUsersLabel.text = "\(self.buildNpsModel?.freemiumUsers?.count ?? 0)"
+        self.premiumTotalUsersLabel.text = "\(self.buildNpsModel?.premiumUsers?.count ?? 0)"
+        self.usersAnswersLabel.text = "of the users that answered \(npsValue) in their"
+        
+        //TODO:Update nps info data.
+        let npsUsersPredicate = NSPredicate(format: "npsValue == \(npsValue)")
+        let myArray:[KNpsModel] = self.buildNpsModel?.allUsers?.filtered(using: npsUsersPredicate) as! [KNpsModel]
+        let activityViews = myArray.map({ $0.activityViews })
+        
+        // Create dictionary to map value to count
+        var counts = [Int: Int]()
+        
+        // Count the values with using forEach
+        activityViews.forEach { counts[$0] = (counts[$0] ?? 0) + 1 }
+        
+        // Find the most frequent value and its count with max(by:)
+        if let (value, count) = counts.max(by: {$0.1 < $1.1}) {
+            //print("\(value) occurs \(count) times")
+            if count > 1 {
+                self.numberActivitiesLabel.text = "\(value) activities"
+            } else {
+                self.numberActivitiesLabel.text = "\(activityViews.max() ?? 0) activities"
+            }
+            self.currentPercentageOfUsersLabel.text = "\((count * 100)/activityViews.count)%"
+        }
     }
     
     //MARK:UICollectionViewDelegate methods
@@ -59,11 +85,6 @@ class KNpsBuildDetailViewController: KBaseViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.currentSelectedIndex = indexPath.row
         collectionView.reloadData()
-        //TODO:Update nps info data.
-        let npsUsersPredicate = NSPredicate(format: "npsValue == \(indexPath.row)")
-        let myArray:[KNpsModel] = self.buildNpsModel?.allUsers?.filtered(using: npsUsersPredicate) as! [KNpsModel]
-        let activityViews = myArray.map({ $0.activityViews })
-        print(activityViews)
-        //TODO: get mode valie from activityViews array and get the percentage depending on the total users array with the formula.
+        setUpNpsDetailUIData(npsValue: indexPath.row)
     }
 }

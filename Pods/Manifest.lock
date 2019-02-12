@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.8.1)
+  - WinkLoadingView (0.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - WinkLoadingView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - WinkLoadingView
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  WinkLoadingView: a3d6f2612642ff263743f55d8209663b22a3dda7
 
-PODFILE CHECKSUM: 16a82cee4c7e90ccc6e689b68ddb786845e7ffc6
+PODFILE CHECKSUM: 26289149a588b42fa81424b86a55ac486746786a
 
 COCOAPODS: 1.6.0

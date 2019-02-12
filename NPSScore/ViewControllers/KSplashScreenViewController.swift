@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import WinkLoadingView
 
 class KSplashScreenViewController: KBaseViewController {
 
     //MARK:ViewController UI properties
     @IBOutlet weak var tryAgainButton: UIButton!
     @IBOutlet weak var tryAgainLabel: UILabel!
+    @IBOutlet weak var loadingView: WinkLoadingView!
     
     //MARK:ViewController life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpLoadingView()
         markRequestToApi()
     }
     
@@ -42,7 +45,7 @@ class KSplashScreenViewController: KBaseViewController {
         }
         let descriptor = NSSortDescriptor(key: "releaseDate", ascending: false)
         KNPSSingleton.sharedInstance.buildsArray = resultBuildsArray.sortedArray(using: [descriptor]) as NSArray
-        showBuildsController()
+        self.loadingView.finishLoading()
     }
     
     override func didFailedToParseFromObject(failedObject: AnyObject) {
@@ -68,6 +71,15 @@ class KSplashScreenViewController: KBaseViewController {
             self.tryAgainButton.isHidden = true
         }
         markRequestToApi()
+    }
+    
+    func setUpLoadingView() {
+        self.loadingView.color = UIColor.white
+        self.loadingView.animationCompletionHandler = {
+            self.showBuildsController()
+            self.loadingView.isHidden = true
+        }
+        self.loadingView.startLoading()
     }
     
     func showBuildsController() {

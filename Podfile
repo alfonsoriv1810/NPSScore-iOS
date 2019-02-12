@@ -6,5 +6,6 @@ target 'NPSScore' do
   
   # Pods for NPSScore
   pod 'Alamofire'
+  pod 'WinkLoadingView'
 
 end

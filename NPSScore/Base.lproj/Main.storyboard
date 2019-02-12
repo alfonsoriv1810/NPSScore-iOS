@@ -53,6 +53,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbs-q9-zGE" customClass="WinkLoadingView" customModule="WinkLoadingView">
+                                <rect key="frame" x="157.5" y="402.5" width="60" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Iyx-eg-xy0"/>
+                                    <constraint firstAttribute="height" constant="128" id="S38-Kg-mCK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.45882352941176469" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -61,7 +69,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tJr-Be-87U" secondAttribute="trailing" constant="16" id="DKg-Hl-QLa"/>
                             <constraint firstItem="ful-40-ltw" firstAttribute="top" secondItem="tJr-Be-87U" secondAttribute="bottom" constant="16" id="H7j-S1-bMc"/>
                             <constraint firstItem="yLd-G7-Nhg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O3r-iw-FZ6"/>
+                            <constraint firstItem="lbs-q9-zGE" firstAttribute="top" secondItem="yLd-G7-Nhg" secondAttribute="bottom" constant="24" id="PZZ-u4-hJB"/>
                             <constraint firstItem="ful-40-ltw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yLd-G7-Nhg" secondAttribute="leading" id="Twv-ur-AZX"/>
+                            <constraint firstItem="lbs-q9-zGE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMO-zn-OeZ"/>
                             <constraint firstItem="yLd-G7-Nhg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lqY-x1-Q3b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ful-40-ltw" secondAttribute="bottom" constant="20" id="nDS-qD-aB5"/>
                             <constraint firstItem="tJr-Be-87U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="taL-Lz-PlK"/>
@@ -69,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="lbs-q9-zGE" id="N0L-Hr-dPl"/>
                         <outlet property="tryAgainButton" destination="ful-40-ltw" id="3Qn-aF-iVW"/>
                         <outlet property="tryAgainLabel" destination="tJr-Be-87U" id="Z98-6m-DFd"/>
                     </connections>
